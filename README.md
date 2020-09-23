@@ -12,9 +12,9 @@
 > 在实际使用时，发现有时属性注入会失败。（非必现）没有仔细调查原因，可能是哪里用得不对。
 > 为了避免在项目中出现非预期的问题，实现了一个简单版本的，通过 Attribute 完成自动注册的库。
 
-## Autofac 扩展
+## 1 Autofac 扩展
 
-### 通过 Atttibute 实现服务的注册
+### 1.1 通过 Atttibute 实现服务的注册
 
 | Attribute           | 作用                                                   |
 |---------------------|------------------------------------------------------|
@@ -22,15 +22,17 @@
 | RepositoryAttribute | 与 ComponentAttribute 相同，默认作用域为 SingleInstance |
 | ServiceAttribute    | 与 ComponentAttribute 相同，默认作用域为 SingleInstance |
 
-### 通过 AutowiredAttribute 进行属性注册
+### 1.2 通过 AutowiredAttribute 进行属性注册
 
 默认情况下，仅对使用了 `ComponentAttribute`（Repository，Service）标记的类中，对属性标记 `AutowiredAttribute` 才有效。
-如果需要其它类型也实现相同属性注入，
-1 可以使用 `IComponentDetector` 接口导出组件
+
+### 1.3 IComponentDetector
 
 `IComponentDetector` 是作为 `ComponentAttribute` 的补充，可以批量注册一类组件。
 
-## Quick Start
+对于已经通过其它方式注册，仅仅是想通过 `AutowiredAttribute` 进行属性注入的，可以在返回的 `ComponentModel` 中，将 `IsOnlyRegisterProperties` 标记为 `true`(这个是默认值)。
+
+## 2 Quick Start
 
 ``` bash
 Install-Package dotnetCampus.Autofac.Annotation -Version 0.0.1-alpha
