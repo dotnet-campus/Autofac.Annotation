@@ -2,7 +2,7 @@
 
 | Build | NuGet |
 |--|--|
-|![](https://github.com/dotnet-campus/dotnetCampus.Autofac.Annotation/workflows/.NET%20Core/badge.svg)|[![](https://img.shields.io/nuget/v/dotnetCampus.Autofac.Annotation.svg)](https://www.nuget.org/packages/dotnetCampus.Autofac.Annotation)|
+|![](https://github.com/dotnet-campus/Autofac.Annotation/workflows/.NET%20Core/badge.svg)|[![](https://img.shields.io/nuget/v/dotnetCampus.Autofac.Annotation.svg)](https://www.nuget.org/packages/dotnetCampus.Autofac.Annotation)|
 
 项目灵感来源于：
 [yuzd/Autofac.Annotation: Autofac extras library for component registration via attributes 用注解来load autofac 摆脱代码或者xml配置和java的spring的注解注入一样的体验](https://github.com/yuzd/Autofac.Annotation )
