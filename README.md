@@ -30,7 +30,11 @@
 
 `IComponentDetector` 是作为 `ComponentAttribute` 的补充，可以批量注册一类组件。
 
-### Quick Start
+## Quick Start
+
+``` bash
+Install-Package dotnetCampus.Autofac.Annotation -Version 0.0.1-alpha
+```
 
 ``` csharp
 builder.RegisterModule(
@@ -38,4 +42,6 @@ builder.RegisterModule(
                     .SetComponentDetector(new AutofacComponentDetector()));
 ```
 
-SetComponentDetector 非必须
+> SetComponentDetector 非必须
+
+---

@@ -7,8 +7,8 @@
  
     <!-- 替换下面信息 -->
     <Authors>dotnet-campus</Authors>
-    <RepositoryUrl>https://github.com/dotnet-campus/dotnetCampus.Autofac.Annotation</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/dotnet-campus/dotnetCampus.Autofac.Annotation</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dotnet-campus/Autofac.Annotation</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/dotnet-campus/Autofac.Annotation</PackageProjectUrl>
     <Description>Autofac 扩展，使用 Attribute 进行服务注册与属性注入</Description>
 
     <RepositoryType>git</RepositoryType>
