@@ -22,11 +22,11 @@
 | RepositoryAttribute | 与 ComponentAttribute 相同，默认作用域为 SingleInstance |
 | ServiceAttribute    | 与 ComponentAttribute 相同，默认作用域为 SingleInstance |
 
-### 1.2 通过 AutowiredAttribute 进行属性注册
+### 1.2 通过 AutowiredAttribute 进行属性注入
 
 默认情况下，仅对使用了 `ComponentAttribute`（Repository，Service）标记的类中，对属性标记 `AutowiredAttribute` 才有效。
 
-### 1.3 IComponentDetector
+### 1.3 通过 IComponentDetector 批量注册
 
 `IComponentDetector` 是作为 `ComponentAttribute` 的补充，可以批量注册一类组件。
 
@@ -35,7 +35,7 @@
 ## 2 Quick Start
 
 ``` bash
-Install-Package dotnetCampus.Autofac.Annotation -Version 0.0.1-alpha
+Install-Package dotnetCampus.Autofac.Annotation
 ```
 
 ``` csharp
