@@ -7,10 +7,10 @@
 项目灵感来源于：
 [yuzd/Autofac.Annotation: Autofac extras library for component registration via attributes 用注解来load autofac 摆脱代码或者xml配置和java的spring的注解注入一样的体验](https://github.com/yuzd/Autofac.Annotation )
 
-此项目的功能要丰富更多。
+`yuzd/Autofac.Annotation` 这个项目的功能要丰富更多。
 
-> 在实际使用时，发现有时属性注入会失败。（非必现）没有仔细调查原因，可能是哪里用得不对。
-> 为了避免在项目中出现非预期的问题，实现了一个简单版本的，通过 Attribute 完成自动注册的库。
+> 在实际使用时，发现`yuzd/Autofac.Annotation`有时属性注入会失败。（非必现）没有仔细调查原因，可能是哪里用得不对。
+> 为了避免在实际项目中出现非预期的问题，就实现了一个简单版本的，通过 Attribute 完成自动注册的库。
 
 ## 1 Autofac 扩展
 
@@ -39,11 +39,11 @@ Install-Package dotnetCampus.Autofac.Annotation -Version 0.0.1-alpha
 ```
 
 ``` csharp
+// autofac 的 RegisterModule
+// SetComponentDetector 非必须
 builder.RegisterModule(
                 new AutofacAnnotationModule(_assemblies)
                     .SetComponentDetector(new AutofacComponentDetector()));
 ```
-
-> SetComponentDetector 非必须
 
 ---
