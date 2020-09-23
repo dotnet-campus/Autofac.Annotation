@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using Autofac.Util;
 using dotnetCampus.Autofac.Annotation.AnnotationExtensions;
 
 namespace dotnetCampus.Autofac.Annotation.AnnotationCore
@@ -41,7 +42,7 @@ namespace dotnetCampus.Autofac.Annotation.AnnotationCore
 
         private List<ComponentModel> DetectComponentModels(Assembly assembly)
         {
-            var types = assembly.GetExportedTypes();
+            var types = assembly.GetLoadableTypes();
             return types
                 .Where(type => type.IsClass && !type.IsAbstract)
                 .Select(type => type.GetComponent(_componentDetector))
